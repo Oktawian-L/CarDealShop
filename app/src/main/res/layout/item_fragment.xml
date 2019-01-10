@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemFragment">
+
+    <TextView
+        android:id="@+id/iname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@(ItemBinding.LDItem.iname)"
+        android:textAlignment="center"
+        android:textSize="24dp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:stepSize="1"
+        />
+    <TextView
+        android:id="@+id/idesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@(ItemBinding.LDItem.idescrption)"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+</FrameLayout>
