@@ -8,7 +8,7 @@
     </data>
 
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,7 +23,7 @@
             android:id="@+id/iname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="@{ItemBinding.LDItem.iname}"
             android:textAlignment="center"
             android:textSize="24dp"/>
 
@@ -39,7 +39,7 @@
             android:id="@+id/idesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="@{ItemBinding.LDItem.idescription}"
             android:textAlignment="center"
             android:textSize="18dp"/>
 
@@ -48,8 +48,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button" />
-
-
     </LinearLayout>
 
 </FrameLayout>
