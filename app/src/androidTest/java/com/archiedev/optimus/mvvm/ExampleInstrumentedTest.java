@@ -1,4 +1,4 @@
-package com.example.olasek.myapplication;
+package com.archiedev.optimus.mvvm;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.olasek.myapplication", appContext.getPackageName());
+        assertEquals("com.archiedev.optimus.mvvm", appContext.getPackageName());
     }
 }

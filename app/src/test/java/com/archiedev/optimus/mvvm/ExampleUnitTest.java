@@ -1,4 +1,4 @@
-package com.example.olasek.myapplication;
+package com.archiedev.optimus.mvvm;
 
 import org.junit.Test;
 
