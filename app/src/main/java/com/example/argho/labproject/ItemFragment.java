@@ -1,4 +1,4 @@
-package com.archiedev.optimus.mvvm;
+package com.example.argho.labproject;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -27,8 +27,8 @@ public class ItemFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        //return inflater.inflate(R.layout.item_fragment, container, false);
-        binding = DataBindingUtil.inflate(inflater,R.layout.item_fragment,container,false);
+//        return inflater.inflate(R.layout.item_fragment, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.item_fragment, container, false);
         return binding.getRoot();
     }
 
@@ -36,26 +36,26 @@ public class ItemFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(ItemViewModel.class);
-        // TODO: Use the ViewModel
+
         final Observer<Item> ItemObserver = new Observer<Item>() {
+
             @Override
             public void onChanged(@Nullable final Item newItem) {
-                ((TextView)getActivity().findViewById(R.id.iname)).setText(newItem.iname);
-                ((RatingBar)getActivity().findViewById(R.id.ratingBar)).setRating(newItem.istrength);
-                ((TextView)getActivity().findViewById(R.id.idesc)).setText(newItem.idescription);
-
-
+                ((TextView) getActivity().findViewById(R.id.itemName)).setText(newItem.itemName);
+                ((RatingBar) getActivity().findViewById(R.id.ratingBar)).setRating(newItem.itemStrength);
+                ((TextView) getActivity().findViewById(R.id.itemDescription)).setText(newItem.itemDesctiprion);
             }
         };
-        mViewModel.getLDItem().observe(this,ItemObserver);
 
-        ((Button)getActivity().findViewById(R.id.button)).setOnClickListener(new View.OnClickListener(){
+        mViewModel.getLiveDataItem().observe(this, ItemObserver);
+
+        ((Button)getActivity().findViewById(R.id.button)).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View v) {
                 mViewModel.setNewItem();
             }
         });
-
     }
+
 
 }

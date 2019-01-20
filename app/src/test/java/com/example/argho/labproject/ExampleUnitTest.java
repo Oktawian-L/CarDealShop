@@ -1,4 +1,4 @@
-package com.archiedev.optimus.mvvm;
+package com.example.argho.labproject;
 
 import org.junit.Test;
 
