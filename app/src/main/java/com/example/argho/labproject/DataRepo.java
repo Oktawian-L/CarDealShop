@@ -10,6 +10,8 @@ public class DataRepo {
         item = new Item(3);
         for (int i = 1; i <= item.MAX_STRENGTH; i++) {
             itemList.add(new Item(i));
+
+            
         }
     }
 
